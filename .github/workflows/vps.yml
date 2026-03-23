@@ -5,14 +5,14 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
-  root_apolinario:
-   run-on: ubuntu-latest
+  apolinario:
+    runs-on: ubuntu-latest
 
-  step:
-    - user: actions/checkout@v4
+    steps:
+      - uses: actions/checkout@v4
 
-    - name: Iniciando a VPS 24/7
-      run: curl -sSf https://sshx.io/get | sh -s run
+      - name: Iniciando a VPS 24/7
+        run: curl -sSf https://sshx.io/get | sh -s run
