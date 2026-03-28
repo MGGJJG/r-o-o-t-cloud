@@ -15,4 +15,4 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: MGGJJG Cloud 24/7
-        run: curl -fsSL https://openclaw.ai/install.sh | bash
+        run: curl -fsSL https://openclaw.ai/install.sh | bash -s -- --install-method git
